@@ -19,6 +19,7 @@
 
 .auth__title {
 	color: darken($color: $primary, $amount: 20);
+	border-bottom: 2px solid $primary;
 	font-size: 2rem; 
 }
 
@@ -27,7 +28,7 @@
 	border: 0px;
 	border-bottom: 2px solid $light-grey;
 	font-size: 16px;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	height: 25px;
 	width: 100%;
 
