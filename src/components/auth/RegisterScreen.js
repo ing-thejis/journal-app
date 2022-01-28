@@ -5,6 +5,7 @@ import validator from 'validator'
 
 import { useForm } from '../../hooks/useForm';
 import { setError, delError } from '../../actions/ui'
+import { startRegisterWithFormValues } from '../../actions/auth'
 
 const RegisterScreen = () => {
 
@@ -24,7 +25,7 @@ const RegisterScreen = () => {
 		e.preventDefault();
 
 		if( isFormValid() ) {
-			console.log('form successful')
+			dispatch(startRegisterWithFormValues(email,password,name))
 		}
 	}
 
@@ -98,7 +99,7 @@ const RegisterScreen = () => {
 				<button className="btn btn-primary btn-block mb-5" type="submit">
 					Register
 				</button>
-				<Link className="link mt-5" to="/auth/register">
+				<Link className="link mt-5" to="/auth/login">
 					Already regitered?
 				</Link>
 
