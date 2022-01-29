@@ -8,3 +8,15 @@ export const setError = (err) => ({
 export const delError = () => ({
 	type: types.uiDelError
 })
+
+export const startLoading = () => {
+	return {
+		type: types.uiStartLoaing
+	}
+}
+
+export const finishLoading = () => {
+	return {
+		type: types.uiFinishLoading
+	}
+}
