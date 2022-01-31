@@ -8,7 +8,7 @@ const Sidebar = () => {
 	const dispatch = useDispatch();
 
 		const handleLogout = () => {
-			console.log( startLogout() )
+			dispatch( startLogout() )
 		}
 
 	return (
@@ -18,7 +18,7 @@ const Sidebar = () => {
 					<i className="far fa-moon"></i>
 					<span>Jesith</span>
 				</h3>
-				<button className="btn" onClick={ () => handleLogout() }>
+				<button className="btn" onClick={ handleLogout }>
 					Logout
 				</button>
 			</div>

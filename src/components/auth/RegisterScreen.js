@@ -32,21 +32,21 @@ const RegisterScreen = () => {
 	const isFormValid = () => {
 
 		if( name.trim().length === 0) {
-			console.log('Name is required')
+			//console.log('Name is required')
 			dispatch( setError('Name is required') )
 			return false;
 		} else if ( !validator.isEmail( email )) {
-			console.log('Email isn\'t valid')
+			//console.log('Email isn\'t valid')
 			dispatch( setError('Email isn\'t valid') )
-			return false
+			return false;
 		} else if ( password !== password2 || password.length < 5 ) {
-			console.log('Password is invalid')
+			//console.log('Password is invalid')
 			dispatch( setError('Password is invalid') )
-			return false
+			return false;
 		}
 
 		dispatch( delError() )
-		return true
+		return true;
 
 	}
 
